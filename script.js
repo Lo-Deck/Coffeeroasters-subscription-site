@@ -258,6 +258,8 @@ if(document.querySelector('.plan')){
 
             }
 
+             window.scrollTo(0, 0);
+
         }
 
         else{
