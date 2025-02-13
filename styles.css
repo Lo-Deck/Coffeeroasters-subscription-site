@@ -1,0 +1,1592 @@
+:root{
+
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—48 */
+
+  --width-mobile-327px: 20.4375rem;
+  --size-689-1280: clamp(43.0625rem, 0.8482rem + 87.9464vw, 80rem);
+  --fontSize-15-16: clamp(0.9375rem, 0.8661rem + 0.1488vw, 1rem);
+  --fontSize-32-40: clamp(2rem, 1.4286rem + 1.1905vw, 2.5rem);
+
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100vh; 
+  text-align: left;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  background: #FEFCF7;
+  text-align: center;
+}
+
+.text-regular{
+  font-family: "Barlow", serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.text-bold{
+  font-family: "Barlow", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title{
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+img{
+  display: block;
+}
+
+.list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.button{
+  display: block;  
+  background: transparent;
+  border-style: none;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.button-plan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0E8784;
+  color: #FEFCF7;
+  font-size: 1.125rem;
+  width: 13.5625rem;
+  height: 3.5rem;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+  border-radius: 0.25rem;
+}
+
+.button-plan:hover{
+  filter: brightness(1.2) contrast(1.1);
+}
+
+a{
+  cursor: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.background-menu{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(43, 78%, 98%, 0.5);
+  position: fixed;
+  z-index: 1;
+}
+
+/*HEADER*/
+
+.header-container{
+  position: relative;
+  z-index: 10;
+}
+
+.index{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto 2.5rem;
+}
+
+.logo{
+  width: 10.1875rem;
+  height: 1.125rem;
+}
+
+.button-nav{
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-menu{
+  display: none;
+  width: 100%;
+  background: #FEFCF7;
+  position: absolute;
+  box-shadow: 4rem 4rem 3rem #FEFCF7,
+              -4rem 4rem 3rem #FEFCF7;
+}
+
+.list-nav{
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.li-nav{
+  margin-bottom: 2rem;
+}
+
+.li-nav:hover{
+  cursor: pointer;  
+}
+
+
+/*MAIN*/
+
+.main-container{
+  max-width: var(--width-mobile-327px);
+}
+
+/*SECTION_TOP*/
+
+.section-top{
+  background: url(./images/home/mobile/image-hero-coffeepress.jpg) no-repeat center / cover;
+  border-radius: 0.5rem;
+  color: #FEFCF7;
+  padding: 6rem 0;
+}
+
+.section-top .title{
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.section-top .text-regular{
+  max-width: 17.5rem;
+  opacity: 0.8;
+  margin: 1.75rem auto 2.625rem;
+}
+
+.section-top .button-plan{
+  margin: 0 auto;
+}
+
+
+/*ARTICLE*/
+
+/*COLLECTION*/
+
+.article-collection{
+  margin: 8.625rem 0 6.5rem;
+}
+
+.container-title{
+  box-shadow: inset 0rem -1.5rem 2rem #FEFCF7;  
+}
+
+.article-collection .container-title  .title{
+  font-size: 2.5rem;
+  color: #83888F;
+  margin-bottom: 2.2rem;
+  position: relative;
+  z-index: -1;  
+}
+
+.section-collection{
+  color: #333D4B;
+  margin-bottom: 3.5rem;
+}
+
+.collection-image{
+  width: 12.5rem;
+  height: 9.375rem;
+  margin: 0 auto;
+}
+
+.section-collection .title{
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+}
+
+.section-collection .text-regular{
+  width: 32ch;
+  margin: 0 auto;
+}
+
+
+/*CHOOSE*/
+
+.article-choose{
+  color: #FEFCF7;
+  position: relative;
+}
+
+.background-choose{
+  width: 100%;
+  height: 56.375rem;
+  background: #2C343E;  
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.article-choose > .title{
+  padding-top: 4rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+}
+
+.article-choose > .text-regular{
+  margin-bottom: 4rem;
+  padding: 0 1.5rem;
+  opacity: 0.8;
+}
+
+.advantages{
+  background: #0E8784;
+  border-radius: 0.5rem;
+  margin: 0 1.5rem 1.5rem;
+  padding: 4.375rem 0 2.8rem;
+}
+
+.advantages-image{
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0 auto 3.75rem;
+}
+
+.advantages:last-of-type .advantages-image{
+  width: 4.5rem;
+  height: 3.125rem;
+  margin: 0 auto 3.75rem;
+}
+
+.advantages .title{
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.advantages .text-regular{
+  width: 23ch;
+  margin: 0 auto;
+}
+
+
+/*WORKS*/
+
+.works{
+  max-width: var(--width-mobile-327px);
+  margin: 7.5rem 0;
+}
+
+.container-shape{
+  display: none;
+}
+
+.works > .title{
+  font-size: 1.5rem;
+  color: #83888F;
+  margin-bottom: 5rem;
+}
+
+.section-works{
+  color: #333D4B;
+  margin-bottom: 4.375rem;
+}
+
+.section-works .number.title{
+  font-size: 4.5rem;
+  color: #FDD6BA;
+  line-height: 1;
+  margin: 0;
+}
+
+.section-works .title{
+  font-size: 1.75rem;
+  margin: 1.5rem 0 1.5rem;
+}
+
+.works .button-plan{
+  margin: 0 auto;
+}
+
+
+/*FOOTER*/
+
+.bottom{
+  background: #2C343E;
+  padding: 3.25rem 0;
+  margin-bottom: 4.625rem;
+}
+
+.bottom .logo-footer {
+  margin: 0 auto;
+}
+
+.bottom svg{
+  fill: #FEFCF7;
+}
+
+.list-footer{
+  font-size: 0.75rem;
+  color: #83888F;
+  text-transform: uppercase;
+  margin: 3rem 0;
+}
+
+.li-footer:hover{
+  cursor: pointer;
+  color: #FEFCF7;
+}
+
+.li-footer:not(:last-child){
+  margin-bottom: 1.8rem;
+}
+
+.list-svg{
+  max-width: 7.625rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.li-svg svg{
+  fill: #FEFCF7;
+}
+
+.li-svg:hover svg{
+  cursor: pointer;
+  fill: #FDD6BA;
+}
+
+
+/***PAGE ABOUT***/
+
+/*SECTION_TOP*/
+
+.about .section-top{
+  background: url(./images/about/mobile/image-hero-whitecup.jpg) no-repeat center / cover;
+  border-radius: 0.5rem;
+  color: #FEFCF7;
+  padding: 7rem 0 5.625rem;
+}
+
+.about .section-top .title{
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+
+/*SECTION COMMITMENT*/
+
+.commitment{
+  margin: 7.5rem 0 12.5rem;
+  color: #333D4B;
+}
+
+.commitment-image{
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.commitment .title{
+  font-size: 2rem;
+  margin: 3.5rem 0 2.25rem;
+}
+
+.commitment .text-regular{
+  opacity: 0.8;
+}
+
+
+/*SECTION QUALITY*/
+
+.quality{
+  background: #2C343E;
+  color: #FEFCF7;
+  border-radius: 0.5rem;
+  margin-bottom: 7.75rem;
+  padding: 9rem 0 3.75rem;
+  position: relative;
+}
+
+.quality-image{
+  width: 17.4375rem;
+  height: 9.75rem;
+  border-radius: 0.5rem;
+  position: absolute;
+    top: -4.875rem; left: calc(50% - 8.715rem);
+}
+
+.quality .title{
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.quality .text-regular{
+  padding: 0 1.2rem;
+  opacity: 0.8;
+}
+
+
+/*ARTICLE ADDRESS*/
+
+.article-address{
+  margin-bottom: 7.5rem;
+}
+
+.article-address > .title{
+  color: #83888F;
+}
+
+.container-address{
+  color: #333D4B;
+  margin-top: 4.375rem;
+}
+
+.address-image{
+  display: block;
+  margin: 0 auto;
+}
+
+.address .title{
+  display: block;
+  font-size: 1.75rem;
+  color: #333D4B;
+  margin: 3rem 0 0;
+}
+
+
+/***PAGE PLAN***/
+
+.plan .header-container{
+  max-width: var(--width-mobile-327px);
+  width: 100%;    
+  margin: 0 auto;
+}
+
+.plan .main-container{
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/*SECTION_TOP*/
+
+.plan .section-top{
+  max-width: var(--width-mobile-327px);
+  margin: 0 auto;
+  background: url(./images/plan/mobile/image-hero-blackcup.jpg) no-repeat center / cover;
+}
+
+
+/*WORKS*/
+
+.plan .works{
+  max-width: 23.4375rem;
+  background: #2C343E;
+  border-radius: 0.75rem;
+  padding: 5.5rem 1.5rem 5.25rem;
+}
+
+.plan .section-works{
+  color: #fff;
+}
+
+.plan .section-works:last-child{
+  margin-bottom: 0;
+}
+
+
+/*FORM*/
+
+form{
+  max-width: var(--width-mobile-327px);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.disabled{
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.disabled:hover{
+  cursor: not-allowed;
+}
+
+.selection{
+  display: none;
+}
+
+.container-display-select{
+  margin-bottom: 6.75rem;
+}
+
+.container-display-select > .title{
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #83888F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-display-select > .title:hover{
+  cursor: pointer;
+}
+
+.container-display-select > .title.disabled:hover{
+  cursor: not-allowed;
+}
+
+.arrow svg{
+  display: block;
+  margin-left: 5rem;
+  fill: #0E8784;
+}
+
+.container-display-select:first-of-type .container-select{
+  display: block;
+}
+
+.container-display-select:first-of-type .arrow{
+  transform: rotateX(180deg);
+}
+
+.container-select{
+  display: none;
+}
+
+.container-select:first-of-type{
+  margin-top: 2rem;
+}
+
+.select{
+  display: block;
+  background: #F4F1EB;
+  color: #333D4B;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2.7rem 1.5rem 1.5rem;
+}
+
+.select:hover{
+  cursor: pointer;
+  background: #FDD6BA;
+}
+
+.select span{
+  display: block;
+}
+
+.select .title{
+  font-size: 1.5rem;
+  color: inherit;
+  margin-bottom: 0.5rem;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+input[type="radio"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+input[type="radio"]:checked + .select{
+  background: #0E8784;
+  color: #fff;
+}
+
+.result{
+  background: #2C343E;
+  margin-bottom: 3.5rem;
+  padding: 1.5rem 1.25rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.result .text-regular{
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 50%;
+  margin-bottom: 1rem;
+}
+
+.result .title{
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.result span:not(.white){
+  color: #0E8784;
+}
+
+form .button-plan{
+  margin: 0 auto 7.5rem;
+}
+
+
+/*FOOTER*/
+
+.plan .bottom{
+  max-width: var(--width-mobile-327px);
+  width: 100%;
+  margin: 0 auto 4.625rem;
+}
+
+
+/*MODAL*/
+
+.background-modal{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  position: fixed;
+  z-index: 10;
+}
+
+.modal{
+  display: none;
+  max-width: var(--width-mobile-327px);
+  background: #fff;
+  border-radius: 0.5rem;
+  text-align: left;
+  position: absolute;
+    top: 2.2rem; left: calc(50% - 10.22rem);
+  z-index: 10;
+}
+
+.container-text-modal{
+  padding: 0 1.5rem 1.5rem;
+}
+
+.modal > h3{
+  font-size: 1.75rem;
+  background: #333D4B;
+  color: #fff;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.modal p.title{
+  font-size: 1.5rem;
+  color: #83888F;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.modal p.title span:not(.white){
+  color: #0E8784;
+}
+
+.modal p.text-regular{
+  color: #83888F;
+  margin-bottom: 1.25rem;
+}
+
+.container-button-modal > .payment{
+  display: none;
+}
+
+.modal .button-plan{
+  width: 100%;
+}
+
+
+
+/**************/
+/*** TABLET ***/
+
+@media screen and (min-width: 48rem){
+
+
+  body{
+    text-align: left;
+  }
+
+  .text-regular{
+    font-size: var(--fontSize-15-16);
+  }
+
+  .background-menu{
+    display: none;
+  }
+
+  
+/*HEADER*/
+
+  .header-container{
+    width: var(--size-689-1280);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: clamp(2.5rem, 2.2143rem + 0.5952vw, 2.75rem) auto clamp(2.75rem, 4.0893rem + -1.4881vw, 3.375rem);
+  }
+
+  .index{
+    display: block;
+    flex: 1;
+    margin: 0; 
+  }
+
+  .logo{
+    width: 14.75rem;
+    height: 1.625rem;
+  }
+
+  .button-nav{
+    display: none;
+  }
+
+  .nav-menu{
+    display: block;
+    width: 17.6875rem;
+    margin: 0 0 0 auto;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .list-nav{
+    font-family: "Barlow", serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-style: normal;    
+    color: #83888F;
+    text-transform: uppercase;
+    letter-spacing: 0.0575rem;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .li-nav{
+    margin: 0;
+  }
+
+  .li-nav:hover{
+    cursor: pointer;
+    color: #333D4B;
+  }
+
+
+/*MAIN*/
+
+  .main-container{
+    max-width: 100%;
+  }
+
+  /*SECTION_TOP*/
+
+  .section-top{
+    max-width: var(--size-689-1280);
+    background: url(./images/home/tablet/image-hero-coffeepress.jpg) no-repeat center 0 / cover;
+    border-radius: 0.8rem;
+    margin: 0 auto;
+    padding-left: clamp(3.625rem, 1.6964rem + 4.0179vw, 5.3125rem);
+  }
+
+  .section-top .title{
+    font-size: clamp(3rem, 1.2857rem + 3.5714vw, 4.5rem);
+    max-width: clamp(24.875rem, 18.0893rem + 14.1369vw, 30.8125rem);
+  }
+
+  .section-top .text-regular{
+    max-width: clamp(24.875rem, 18.0893rem + 14.1369vw, 30.8125rem);
+    margin: 1.75rem 0 2.625rem;
+    padding-right: clamp(0rem, -3.5714rem + 7.4405vw, 3.125rem);
+  }
+
+  .section-top .button-plan{
+    margin: 0;
+  }
+
+
+/*ARTICLE*/
+
+/*COLLECTION*/
+
+  .article-collection{
+    margin: 8.5rem auto 10rem;
+    width: 43.0625rem;
+  }
+
+  .container-title{
+    box-shadow: inset 0rem -4.5rem 4rem hsla(43, 78%, 98%, 0.9);
+  }
+
+  .article-collection .container-title  .title{
+    font-size: 6.25rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+
+  .section-collection{
+    width: 32rem;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  .section-collection:nth-child(1){
+    margin-top: -6.5rem;
+  }
+
+  .collection-image{
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 15.9375rem;
+    height: 12.0625rem;
+    margin: 1rem 0 0;
+  }
+
+  .section-collection .title{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin: 1.25rem 0 0;
+  }
+
+  .section-collection .text-regular{
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+
+/*CHOOSE*/
+
+  .article-choose{
+    text-align: center;
+  }
+
+  .background-choose{
+    width: 43.0625rem;
+    height: 35.8125rem;
+    border-radius: 0.75rem;
+    position: absolute;
+      left: calc(50% - 21.53125rem);
+  }
+
+  .article-choose > .title{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .article-choose > .text-regular{
+    width: 64ch;
+    margin: 0 auto 4.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .advantages{
+    width: 35.8125rem;
+    border-radius: 0.75rem;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+    padding: 2.75rem 0 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, min-content);
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .advantages-image{
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0;
+  }
+
+  .advantages:last-of-type .advantages-image{
+    width: 4.5rem;
+    height: 2.4375rem;
+  }
+
+  .advantages .title{
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 1rem;
+  }
+
+  .advantages .text-regular{
+    grid-column: 2;
+    grid-row: 2;
+    width: 41ch;
+    margin: 0;
+  }
+
+
+/*WORKS*/
+
+  .works{
+    max-width: var(--size-689-1280);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-rows: repeat(4, min-content);
+    justify-content: start;
+  }
+
+  .works > .title{
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: clamp(3rem, 0.2857rem + 5.6548vw, 5.375rem);
+  }
+
+  .container-shape{
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: clamp(3.625rem, 2.2679rem + 2.8274vw, 4.8125rem);
+    display: flex;
+    align-items: center;
+  }
+
+  .container-shape:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .container-shape:nth-of-type(3){
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .round{
+    width: 1.9375rem;
+    height: 1.9375rem;
+    border-radius: 50%;
+    border: 0.15rem solid #0E8784;
+  }
+
+  .line{
+    background: #FDD6BA;
+    width: calc(100% - 1.9375rem);
+    height: 0.25rem;
+  }
+
+  .section-works{
+    grid-column: 1;
+    grid-row: 3;
+    width: clamp(13.9375rem, 9.1518rem + 9.9702vw, 18.125rem);
+    margin-bottom: clamp(3rem, 1.7143rem + 2.6786vw, 4.125rem);
+    margin-right: clamp(1rem, -5.2857rem + 13.0952vw, 6.5rem);
+  }
+
+  .section-works:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .section-works:nth-of-type(3){
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  .section-works .title{
+    font-size: clamp(1.75rem, 1.4643rem + 0.5952vw, 2rem);
+    margin: 2.8rem 0 2.5rem;
+    padding-right: 2rem;
+  }
+
+  .section-works .text-regular{
+    font-size: var(--fontSize-15-16);
+  }
+
+  .works .button-plan{
+    grid-column: 1 / -1;
+    grid-row: 4;
+    margin: 0;
+  }
+
+
+/*FOOTER*/
+
+  .bottom{
+    width: var(--size-689-1280);
+    text-align: center;
+  }
+
+  .list-footer{
+    width: 17.9375rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.25rem auto 4.125rem;
+  }
+
+  .li-footer:not(:last-child){
+    margin-bottom: 0;
+  }
+
+
+/***PAGE ABOUT***/
+
+  /*SECTION_TOP*/
+
+  .about .section-top{
+    background: url(./images/about/tablet/image-hero-whitecup.jpg) no-repeat center / cover;
+    padding: clamp(7.75rem, 6.3214rem + 2.9762vw, 9rem) 0 clamp(7.75rem, 6.6071rem + 2.381vw, 8.75rem) clamp(3.625rem, 1.6964rem + 4.0179vw, 5.3125rem);
+  }
+
+  .about .section-top .title{
+    font-size: clamp(2rem, 1.4286rem + 1.1905vw, 2.5rem);
+  }
+
+  .about .section-top .text-regular{
+    margin-bottom: 0;
+  }
+
+
+/*SECTION COMMITMENT*/
+
+  .commitment{
+    width: clamp(43.0625rem, 12.9911rem + 62.6488vw, 69.375rem);
+    margin: clamp(9rem, 7.3571rem + 3.4226vw, 10.4375rem) auto clamp(16rem, 22.1607rem + -6.8452vw, 18.875rem);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, min-content);
+    justify-content: space-between;
+  }
+
+  .container-commitment-image{
+    grid-column: 1;
+    grid-row: 1 / -1;
+  }
+
+  .commitment-image{
+    width: clamp(17.5625rem, 5.8482rem + 24.4048vw, 27.8125rem);
+    height: clamp(29.375rem, 25.8036rem + 7.4405vw, 32.5rem);
+    margin-right: clamp(4.25rem, 0.25rem + 8.3333vw, 7.75rem);
+  }
+
+  .commitment .title{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    font-size: var(--fontSize-32-40);
+    margin: 0 0 clamp(2rem, 0.8571rem + 2.381vw, 3rem);
+  }
+
+  .commitment .text-regular{
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+
+/*SECTION QUALITY*/
+
+  .quality{
+    width: 43.0625rem;
+    border-radius: 0.75rem;
+    margin: 0 auto clamp(9.125rem, 7.2679rem + 3.869vw, 10.75rem);
+    padding: 14.125rem 0 4.375rem;
+    text-align: center;
+  }
+
+  .quality-image{
+    width: 35.8125rem;
+    height: 20rem;
+    border-radius: 0.75rem;
+    position: absolute;
+      top: -10rem; left: calc(50% - 17.905rem);
+  }
+
+  .quality .title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+
+/*ARTICLE ADDRESS*/
+
+  .article-address{
+    width: clamp(43.0625rem, 17.6339rem + 52.9762vw, 65.3125rem);
+    margin: 0 auto 7.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    justify-content: space-between;
+  }
+
+  .article-address > .title{
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .container-address{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .container-address:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .container-address:nth-of-type(3){
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .address-image{
+    margin: 0;
+  }
+
+  .address .title{
+    font-size: clamp(1.5rem, 0.9286rem + 1.1905vw, 2rem);
+  }
+
+
+/***PAGE PLAN***/
+
+  .plan .header-container{
+    max-width: var(--size-689-1280);
+    margin: clamp(2.5rem, 2.2143rem + 0.5952vw, 2.75rem) auto clamp(2.75rem, 4.0893rem + -1.4881vw, 3.375rem);
+  }
+
+
+  /*SECTION_TOP*/
+
+  .plan .section-top{
+    width: var(--size-689-1280);
+    max-width: 100%;
+    background: url(./images/plan/tablet/image-hero-blackcup.jpg) no-repeat center / cover; 
+  }
+
+
+  /*WORKS*/
+
+  .plan .works{
+    max-width: clamp(48rem, 11.4286rem + 76.1905vw, 80rem);
+    padding: 5.5rem 1.5rem 5.25rem clamp(2.5rem, 1.3571rem + 2.381vw, 3.5rem);
+    margin-bottom: 9.625rem;
+  }
+
+
+/*FORM*/
+
+  form{
+    max-width: 43.0625rem;
+  }
+
+  .container-display-select{
+    margin-bottom: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, min-content);
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+
+  .container-display-select:last-of-type{
+    margin-bottom: 9rem;
+  }
+
+  .container-display-select > .title{
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: 2rem;
+  }
+
+  .container-select{
+    margin-top: 2.75rem;
+  }
+
+  .container-select:first-of-type{
+    margin-top: 2.75rem;
+  }
+
+  .container-select{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .container-select:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 2;    
+  }
+
+  .container-select:nth-of-type(3){
+    grid-column: 3;
+    grid-row: 2; 
+  }
+
+  .select{
+    width: 13.9375rem;
+    height: 15.625rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .select .text-regular{
+    width: 20ch;
+  }
+
+  .result{
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem 1.5rem;
+  }
+
+  .result .text-regular{
+    margin-bottom: 0.5rem;
+  }
+
+  .result .title{
+    width: 35ch;
+  }
+
+  .result span:last-of-type{
+    text-wrap: nowrap;
+  }
+
+
+/*FOOTER*/
+
+  .plan .bottom{
+    max-width: var(--size-689-1280);
+  }
+
+
+/***MODAL***/
+
+  .modal{
+    max-width: 33.75rem;
+    position: absolute;
+      top: 13.375rem; left: calc(50% - 16.875rem);
+  }
+
+  .container-text-modal{
+    padding: 0 3.5rem 3.5rem;
+  }
+
+  .modal > h3{
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    padding: 3.375rem 3.5rem 2rem;
+  }
+
+  .modal p.title{
+    margin-bottom: 2rem;
+  }
+
+  .modal p.text-regular{
+    margin-bottom: 2rem;
+  }
+
+  .container-button-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container-button-modal > .payment.title{
+    display: block;
+    color: #333D4B;
+    margin: 0;
+  }
+
+  .modal .button-plan{
+    width: 13.5625rem;
+    height: 3.5rem;
+  }
+
+  .button-plan .payment{
+    display: none;
+  }
+
+}
+
+
+
+/**************/
+/***DESKTOP***/
+
+@media screen and (min-width: 90rem){
+
+
+/*SECTION_TOP*/
+
+  .section-top{
+    background: url(./images/home/desktop/image-hero-coffeepress.jpg) no-repeat center 0 / cover;
+  }
+
+
+/*ARTICLE*/
+
+/*COLLECTION*/
+
+  .article-collection{
+    width: 69.375rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  .container-title{
+    grid-column: 1 / -1;
+    grid-row: 1;
+    box-shadow: inset 0rem -10rem 5rem hsla(43, 78%, 98%, 0.9);
+  }
+
+  .article-collection .container-title  .title{
+    font-size: 11rem;
+  }
+
+  .section-collection{
+    width: 15.9375rem;
+    display: block;
+    text-align: center;
+    margin-top: -7rem;
+  }
+
+  .section-collection:nth-child(1){
+    margin: 0;
+  }
+
+  .collection-image{
+    margin: 0;
+  }
+
+  .section-collection .title{
+    margin: 3.5rem 0 1.25rem;
+  }
+
+  .section-collection .text-regular{
+    width: 28ch;
+  }
+
+
+/*CHOOSE*/
+
+  .background-choose{
+    width: 80rem;
+    height: 36.0625rem;
+    position: absolute;
+      left: calc(50% - 40rem);
+  }
+
+  .article-choose > .title{
+    font-size: 2.5rem;
+  }
+
+  .article-choose > .text-regular{
+    font-size: 1rem;
+  }
+
+  .container-section-advantages{
+    width: 69.375rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .advantages{
+    width: 21.875rem;
+    margin: 0;
+    display: block;
+    text-align: center;
+    padding: 4.375rem 0 3rem;
+  }
+
+  .advantages-image{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 0 auto 3.625rem;
+  }
+
+  .advantages:last-of-type .advantages-image{
+    width: 4.5rem;
+    height: 3.125rem;
+    margin-top: 1.5rem;
+  }
+
+  .advantages .text-regular{
+    width: 28ch;
+    margin: 0 auto;
+  }
+
+
+/*FOOTER*/
+
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 3rem 5.375rem;
+  }
+
+  .bottom .logo-footer {
+    margin: 0;
+  }
+
+  .list-footer{
+    margin: 0;
+  }
+
+  .list-svg{
+    width: 7.625rem;
+    margin: 0;
+  }
+
+
+/***PAGE ABOUT***/
+
+  /*SECTION QUALITY*/
+
+  .quality{
+    width: 80rem;
+    padding: 5rem 5.25rem 10rem;
+    text-align: left;
+  }
+
+  .quality-image{
+    width: 27.8125rem;
+    height: 29.625rem;
+    position: absolute;
+      top: -5.5rem; left: calc(50% + 7.5rem);
+  }
+
+  .quality .title{
+    font-size: 2.5rem;
+  }
+
+  .quality .text-regular{
+    padding: 0;
+    width: 59ch;
+  }
+
+
+/***PAGE PLAN***/  
+
+  /*WORKS*/
+
+  .plan .works{
+    margin-bottom: 10.25rem;
+  }
+
+
+  /*FORM*/
+
+  form{
+    max-width: 80rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .selection{
+    display: block;
+    font-size: 1.5rem;
+    color: #83888F;
+    margin-right: 7.75rem;
+  }
+
+  .selection p.selected{
+    color: #333D4B;
+    opacity: 1;
+  }
+
+  .selection p.disabled:hover {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .selection p{
+    opacity: 0.5;
+  }
+
+  .selection p:hover{
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .selection p:first-child{
+    padding: 0 0 1.5rem;
+  }
+
+  .selection p:not(:first-of-type){
+    padding: 1.5rem 0;
+  }
+
+  .selection p:not(:last-of-type){
+    border-bottom: 0.0625rem solid hsla(215, 5%, 54%, 0.5);
+  }
+
+  .selection p span{
+    color: hsla(215, 5%, 54%, 0.5);
+    margin-right: 1.75rem;
+  }
+
+  .selection p:first-child span{
+    color: #0E8784;
+  }
+
+  .display-desktop-form{
+    width: 45.625rem;
+  }
+
+  .container-display-select:last-of-type{
+    margin-bottom: 5.5rem;
+  }
+
+  .container-display-select > .title{
+    font-size: 2.5rem;
+  }
+
+  .container-select{
+    margin-top: 3.5rem;
+  }
+
+  .container-select:first-of-type{
+    margin-top: 3.5rem;
+  }
+
+  .container-select:not(:first-of-type){
+    margin-left: 1.5rem;
+  }
+
+  .select{
+    width: 14.25rem;
+    height: 15.625rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  form .button-plan{
+    margin: 0 0 10.5rem auto;
+  }
+
+
+}
